@@ -4,11 +4,14 @@ import time
 import random
 import os
 
+print "Startingup..."
+
 #sdev = open("/dev/ttyUSB0", "r")
 serial_dev = os.getenv("HOST_DEV1")
 if serial_dev is None:
     print "Location of serial device file is not provided in the env context.."
-    serial_dev="/dev/ttyUSB0"
+    serial_dev="/dev/tty.usbserial"
+print "Serial Dev: " + serial_dev
 sdev = serial.Serial(port=serial_dev, baudrate=9600) 
 sdev.bytesize = serial.EIGHTBITS #number of bits per bytes
 

@@ -12,7 +12,7 @@ app:
   type: paas
  
   resources:
-    profile: small
+    profile: c1.small
 
     network:
       - 
